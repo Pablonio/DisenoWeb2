@@ -1,6 +1,4 @@
-contador = int(input("Tamano de array: "))
-mostrar = cotenido(contador)
-imprimir(mostrar)
+
 
 def cotenido(contador):
     array = []
@@ -14,5 +12,7 @@ def imprimir(array):
     for i, a in enumerate(array):
         print(f"elemento {i + 1}: {a}")
 
-
+contador = int(input("Tamano de array: "))
+mostrar = cotenido(contador)
+imprimir(mostrar)
 
