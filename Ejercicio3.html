@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <link rel="stylesheet" href="Ejercicio3.css">
+</head>
+<body>
+    <h1>
+        Ejercicio 3
+    </h1>
+    <script>
+        alert("Haga click para ver")
+
+        function mostrarOperacion(operacion,operador, a, b, resultado){
+            document.write(`${operacion} :  ${a} ${operador} ${b}`);
+            console.log(`${operacion} :  ${a} ${operador} ${b}`);
+            document.write("<br>");
+            document.write(`Resultado: ${resultado}`);
+            console.log(`Resultado: ${resultado}`)
+            document.write("<br>");
+        }
+
+        function sumar(a,b){
+            return a+b;
+        }
+        function dividir(a,b){
+         
+            return a/b;
+        }
+        function multiplicacion(a,b){
+            return a*b;
+        }
+        function resta(a,b){
+            return a-b; 
+        }
+        function cuadrado(a){
+             return a*a;
+        }
+        
+        function ImpresionFinal(){
+            mostrarOperacion("Suma","+", 3 , 5, sumar(3,5) )
+            mostrarOperacion("Resta","-", 5 , 5, resta(5,5) )
+            mostrarOperacion("Multiplicacion","*", 3 , 2, multiplicacion(3,2) )
+            mostrarOperacion("Division","/", 15, 5, dividir(15,5) )
+            mostrarOperacion("Cuadrado","^", 3 , 2, cuadrado(3))
+        }
+        
+
+        ImpresionFinal()
+        console.log()
+
+
+    </script>
+</body>
+</html>
