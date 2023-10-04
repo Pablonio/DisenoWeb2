@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10</title>
+</head>
+<body>
+    <center>
+        <h1>
+            Ejercicio 10
+        </h1>
+    </center>
+</body>
+</html>
+<script>
+    //Calendario
+
+    function salto_de_linea(){
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+    }
+
+    function mostra_mensaje(mensaje){
+        document.write(mensaje)
+        salto_de_linea()
+    }
+
+
+
+
+
+    var Lunes = []
+    var Martes = []
+    var Miercoles = []
+    var Jueves = []
+    var Viernes = []
+    var Sabado = []
+    var Domingo = []
+    var Dias = [Lunes,Martes,Miercoles,Jueves,Viernes,Sabado,Domingo]
+    
+    function agregarNota() {
+        var dia = parseInt(prompt("Ingrese el número del día 1 Lunes - 7 Domingo:"));
+        if (dia >= 1 && dia <= 7) {
+            var nota = prompt("Ingrese su nota:");
+            Dias[dia - 1].push(nota);
+            alert("Nota agregada al día " + dia);
+        } else {
+            alert("Número de día inválido");
+        }
+    }
+
+    function mostrarNotas() {
+        var dia = parseInt(prompt("Ingrese para ver las notas del dia 1 Lunes - 7 Domingo:"));
+        if (dia >= 1 && dia <= 7) {
+            alert("Notas para el día " + dia + ":");
+            for (var i = 0; i < Dias[dia - 1].length; i++) {
+                alert("- " + Dias[dia - 1][i]);
+            }
+        } else {
+            console.log("Escogio un dia invalido");
+        }
+    }
+
+    while (true) {
+        var opcion = prompt("Seleccione una opción:\n1. Agregar nota\n2. Mostrar notas\n3. Salir");
+        if (opcion === "1") {
+            agregarNota();
+        } else if (opcion === "2") {
+            mostrarNotas();
+        } else if (opcion === "3") {
+            console.log("Cuidate");
+            break;
+        } else {
+            console.log("Escogio una opcion invalida");
+        }
+    }
+</script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+</head>
+<body>
+    <center>
+        <h1>
+            Ejercicio 9
+        </h1>
+    </center>
+</body>
+</html>
+<script>
+    function salto_de_linea(){
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+    }
+
+    function mostra_mensaje(mensaje){
+        document.write(mensaje)
+        salto_de_linea()
+    }
+
+    
+
+    var Equipos = []
+    var cantidad = parseInt(prompt("Cuantos equipos desea insertar"))
+    var contador = 1
+
+    while(contador<=cantidad){
+        var Equipo_introducido = prompt("Nombre del Equipo"+contador)
+        Equipos.push(Equipo_introducido)
+        contador++
+        console.log(Equipo_introducido)
+    }
+    
+    
+
+</script>

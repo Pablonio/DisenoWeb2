@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+    <center>
+        <h1>
+            Juego
+        </h1>
+    </center>
+</body>
+</html>
+<script>
+    //Calculadora de amor 
+    function salto_de_linea(){
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+    }
+
+    function mostra_mensaje(mensaje){
+        document.write(mensaje)
+        salto_de_linea()
+    }
+
+       
+    function CalculadoraDeAmor(Porcentaje,nombreA,nombreB){
+        if(Porcentaje>75){
+            mostra_mensaje(`El porcentaje de amor entre ${nombreA} y ${nombreB} es ${Porcentaje}% <br> Deberian casarse`)
+        }
+        else{
+            if(Porcentaje>50){
+                mostra_mensaje(`El porcentaje de amor entre ${nombreA} y ${nombreB} es ${Porcentaje}% <br> Deberian considerar conocerse`)
+            }
+            else{
+                if(Porcentaje>25){
+                    mostra_mensaje(`El porcentaje de amor entre ${nombreA} y ${nombreB} es ${Porcentaje}% <br> No trates ni de conocerse`)
+                }
+                else{
+                    mostra_mensaje(`El porcentaje de amor entre ${nombreA} y ${nombreB} es ${Porcentaje}% <br> Bloqueense y eliminense`)
+                }
+            }
+        }
+    }
+    
+
+
+
+    let Porcentaje = Math.round((Math.random()*100))
+    let nombreA = prompt("Ingrese el nombre del chico con apellido")
+    let nombreB = prompt("Ingrese el nombre de la chica con apellido")
+
+    let enviar_datos = CalculadoraDeAmor(Porcentaje,nombreA,nombreB) 
+    console.log(numeroAdivinar)
+
+    
+</script>

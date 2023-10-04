@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+        <center><h1>Uso de prompt</h1></center>
+</body>
+</html>
+<script>
+    function salto_de_linea(){
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+    }
+
+    function mostra_mensaje(mensaje){
+        document.write(mensaje)
+        salto_de_linea()
+    }
+    alert("Suma de dos numeros introducidos por teclado")
+
+    function suma(a,b){
+        return a+b
+    }
+
+    function resta(a,b){
+        return a-b
+    }
+
+    function division(a,b){
+        return a/b
+    }
+
+    function multiplicacion(a,b){
+        return a*b
+    }
+
+    let numero1 = parseInt(prompt("numero 1")) 
+    let numero2 = parseInt(prompt("numero 2"))
+    let resultado = suma(numero1,numero2)
+    let resultado2 = resta(numero1,numero2)
+    let resultado3 = multiplicacion(numero1,numero2)
+    let resultado4 = division(numero1,numero2)
+
+    
+
+
+    alert(resultado,resultado2,resultado3,resultado4)
+    console.log(resultado,resultado2,resultado3,resultado4)
+    mostra_mensaje(resultado,resultado2,resultado3,resultado4)
+    
+    
+</script>

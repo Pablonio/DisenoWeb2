@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio8</title>
+</head>
+<body>
+    <center>
+        <h1>
+            Ejercicio 8
+        </h1>
+    </center>
+</body>
+</html>
+<script>
+    function salto_de_linea(){
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+    }
+
+    function mostra_mensaje(mensaje){
+        document.write(mensaje)
+        salto_de_linea()
+    }
+
+    var array = ["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"]
+    var Bienvenida = "Dias de la semana"
+    mostra_mensaje(Bienvenida)
+
+    for(var i = 0;i<array.length;i++){
+        document.write(array[i])
+        salto_de_linea()
+    }
+
+    for(var i = 0;i<array.length;i=i+2){
+        document.write(array[i])
+        salto_de_linea()
+    }
+</script>

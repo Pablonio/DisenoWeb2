@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <center>
+        <h1>
+            RAMDOM
+        </h1>
+    </center>
+</body>
+</html>
+<script>
+    function salto_de_linea(){
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+    }
+
+    function mostra_mensaje(mensaje){
+        document.write(mensaje)
+        salto_de_linea()
+    }
+
+    var numero = Math.round(Math.random()*10)
+    console.log(numero)
+
+    //if(numero>0){
+        //mostra_mensaje(numero)
+    //}
+    //else{
+        //mostra_mensaje("El numero es 0")
+    //}
+
+    var cont=0;
+    while(cont<numero){
+        alert(numero)
+        console.log(numero)
+        mostra_mensaje(numero)
+    cont++;
+    }
+</script>
