@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function salto_de_linea(){
+        document.write("<br>")
+    }
+
+    function mostra_mensaje(mensaje){
+        document.write("<h1>"+ mensaje + "<h1>")
+        salto_de_linea()
+    }
+
+    function iniciar_array(a,b,mapa,numero){
+        mapa[a][b] = numero
+        for(var i = 0;i<mapa.length;i++){
+            mostra_mensaje(mapa[i])
+            salto_de_linea()
+        }
+    }
+
+    function verFilas_columnas() {
+        
+        let encontrado = mapa[filas][columnas]
+        if ( 1 === encontrado) {
+            alert("Se encontro el tesoro")
+        } else {
+            alert(`Perdiste tienes `)
+        }
+    }
+
+    function iniciar_juego(){
+        
+        let intentos = 1
+        let vidas = 3
+
+        let numero = 1
+        //Arrats
+        let mapa = [
+            [0,0,0,0,0],
+            [0,0,0,0,0],
+            [0,0,0,0,0],
+            [0,0,0,0,0],
+            [0,0,0,0,0]
+        ]
+        let a = Math.round(Math.random()*10/2)
+        let b = Math.round(Math.random()*10/2)
+        iniciar_array(a,b,mapa,numero)
+        while (vidas >= intentos ){
+            let filas = parseInt(prompt("Ingrese en que fila cree que esta el tesoro 1 y 5"));
+            let columnas = parseInt(prompt("Ingrese en que columna cree que esta el tesoro 1 y 5"));
+            verFilas_columnas(filas,columnas)    
+            contador++;
+        }
+    }
+    
+    
+    
+    iniciar_juego()
+
+
+
+
+
+
+    /*
+    Errores:
+
+    1.-Trate de implementar una funcion de contador intentando hacer con el uso de whiles pensando que no podiamos usar la recursividad pero recorde que tambien lo vimos con usted jajaj
+    //Funcion Contador
+    function contador(){
+        //Asignamos a las variables con leten este caso tenemos el signo de separacion y las horas minutos y segundo albergadas en un array
+        let signo = ":"
+        let seg = 0
+        let min = 0 
+        let h = 0
+        let reloj = [h,signo,min,signo,seg]
+
+        //generamos un bucle while donde compare que hora no sea menor a 24 para que se repita mi ciclo
+        while(reloj[0]<24){
+            //Hacemos un join a los elementos de mi array y que se impriman en consola ya que trate de hacer de la mejor forma
+            console.log(reloj.join(""))
+            //Ponemos una condicional que ira en escalas de segundo a horas en donde en cada condicional agrego un bucle para que la tarea no termine hasta que se cumpla el conteo de segundo en segundo 
+            if(reloj[4] < 60 && reloj[4] === 0){
+                while(reloj[4]<60){
+                    reloj[4] = reloj[4]+1
+                    break
+                }
+            }
+            //Escala de minutos
+            else if(reloj[2] < 60 && reloj[2] === 0 && reloj[4] === 60){
+                reloj[4]=0
+                while(reloj[2]<60){
+                    reloj[2] = reloj[2]+1
+                    break
+                }
+            }    
+            //Escala de horas
+            else if(reloj[0] < 24 && reloj[2] === 0 && reloj[2] === 60 && reloj[4] === 60){
+                reloj[2]=0
+                while(reloj[0]<24){
+                    reloj[0] = reloj[0]+1
+                    break
+                }
+            }
+        }
+    }
+    mostra_mensaje(contador())
+    contador()
+
+
+
+    
+    function contador(){
+        //Asignamos a las variables con leten este caso tenemos el signo de separacion y las horas minutos y segundo albergadas en un array
+        let signo = ":"
+        let seg = 0
+        let min = 0 
+        let h = 0
+        let reloj = [h,signo,min,signo,seg]
+        //Se sacaron los whiles dentro debido a que aqui se hara el uso de la recursividad se anadio una funcion buscada en documentacion donde setTimeout es como un sleep
+        //A probar suerte si se puede poner una funcion dentro de otra
+        function actualizacion(){
+            //Escala segundos
+            if(reloj[4] < 60 ){
+                reloj[4] = reloj[4]+1
+            }
+            //Escala de minutos
+            else{
+                reloj[4]=0
+                if(reloj[2] < 60 ){
+                    reloj[2] = reloj[2]+1
+                }
+                else{
+                    reloj[2]=0
+                    if(reloj[0] < 24){
+                        reloj[0] = reloj[0]+1
+                    }
+                } 
+            }
+            mostra_mensaje(reloj.join(""))
+            //Nueva no avanzada pero invesitagada en este caso me sirve para llamar cada 1000ms a la funcion actualizacion
+            setTimeout(actualizacion,1000)
+        }    
+        //Escala de horas
+            
+        //Aqui hacemos lo recursivo
+        actualizacion()
+    }
+
+    contador()
+
+    fallido jajajaj si me cuenta ahora pero me va imprimiendo abajo abajo
+    */
+</script>
