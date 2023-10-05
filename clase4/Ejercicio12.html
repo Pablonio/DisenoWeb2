@@ -27,23 +27,16 @@
         }
     }
 
-    function verFilas_columnas() {
+    function verFilas_columnas(filas,columnas,mapa,numero) {
         
-        let encontrado = mapa[filas][columnas]
-        if ( 1 === encontrado) {
-            alert("Se encontro el tesoro")
-        } else {
-            alert(`Perdiste tienes `)
-        }
+        
     }
 
     function iniciar_juego(){
-        
+        //vidas_en_iniciar
         let intentos = 1
         let vidas = 3
-
-        let numero = 1
-        //Arrats
+        //Arrays
         let mapa = [
             [0,0,0,0,0],
             [0,0,0,0,0],
@@ -53,12 +46,17 @@
         ]
         let a = Math.round(Math.random()*10/2)
         let b = Math.round(Math.random()*10/2)
+        let numero = 1
         iniciar_array(a,b,mapa,numero)
         while (vidas >= intentos ){
             let filas = parseInt(prompt("Ingrese en que fila cree que esta el tesoro 1 y 5"));
             let columnas = parseInt(prompt("Ingrese en que columna cree que esta el tesoro 1 y 5"));
-            verFilas_columnas(filas,columnas)    
-            contador++;
+            let encontrado = mapa[filas][columnas]
+            if ( numero === encontrado) {
+                alert("Se encontro el tesoro")
+            } else {
+                alert(`Perdiste tienes ${vidas - 1}`)
+            }
         }
     }
     
