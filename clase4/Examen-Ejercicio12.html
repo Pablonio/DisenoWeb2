@@ -15,7 +15,7 @@
     }
 
     function mostra_mensaje(mensaje){
-        document.write("<h1>"+ mensaje + "<h1>")
+        document.write("<center><h1>"+ mensaje + "</h1></center><style></style>")
         salto_de_linea()
     }
 
@@ -36,17 +36,19 @@
         //vidas_en_iniciar
         let intentos = 1
         let vidas = 3
+
         //Arrays
         let mapa = [
-            [0,0,0,0,0],
-            [0,0,0,0,0],
-            [0,0,0,0,0],
-            [0,0,0,0,0],
-            [0,0,0,0,0]
+            ["⬛","⬛","⬛","⬛","⬛"],
+            ["⬛","⬛","⬛","⬛","⬛"],
+            ["⬛","⬛","⬛","⬛","⬛"],
+            ["⬛","⬛","⬛","⬛","⬛"],
+            ["⬛","⬛","⬛","⬛","⬛"],
         ]
-        let a = Math.round(Math.random()*10/2)
-        let b = Math.round(Math.random()*10/2)
-        let numero = 1
+        let a = Math.round(Math.random()*10/2-1)
+        let b = Math.round(Math.random()*10/2-1)
+        let numero = "⬜"
+        //Ni yo entiendo que hice aqui pero da inge jajajja hasta con emogis funciona na mentira puse en bucle una condicional que simula los intentos y al final nos revela si hemos acertado o no
         iniciar_array(a,b,mapa,numero)
         while (vidas >= intentos ){
             let filas = parseInt(prompt("Ingrese en que fila cree que esta el tesoro 1 y 5"));
@@ -54,10 +56,13 @@
             let encontrado = mapa[filas][columnas]
             if ( numero === encontrado) {
                 alert("Se encontro el tesoro")
+                numero = "✔"
             } else {
                 alert(`Perdiste tienes ${vidas - 1}`)
             }
+            intentos++
         }
+        numero = "☠"
     }
     
     
