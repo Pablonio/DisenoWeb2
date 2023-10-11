@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcion Anonima Ejercicio 14</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    /*En javascript, una funcion anonima es una funcion que no tiene
+    un nombre asociado y se define directamente
+    en el lugar donde se necesita. Estas funciones se
+    utilizan comunmente como argumentos para otra
+    funciones o se asignan a variable 
+    las funciones anonimas se crean utilizando la palabras clave
+    funcion sin in nmobre especifico*/
+
+    //Definimos nuestra primera funcion anonima desde 2018
+    var suma = function(a,b){
+        return a+b
+    }
+    let resultado = suma(5,2)
+    console.log(resultado)
+
+    //Definimos una arrow function con anonima desde 2021
+    let suma2 = (a,b) => a+b;
+    let resultado2 = suma2(5,4)
+    console.log(resultado2)
+
+    //Operador ternario con arrow function
+    const parImpar = (numero) => (numero % 2 === 0 ? "par" : "impar")
+    console.log(parImpar(6))
+
+    const factorial = (numero1) => {
+        if( numero1 === 0 ){
+            return 1
+        }else{
+            return n* factorial(numero1-1)
+        }
+    }
+</script>

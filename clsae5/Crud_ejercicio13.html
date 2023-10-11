@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13 CRUD</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //Declarar aaray de registro de empleados
+    let empleados = [];
+
+    //metodo crear
+    function agregarEmpleado(nombre,edad,cargo,salario){
+        const empleado = {
+            nombre: nombre,
+            edad: edad,
+            cargo: cargo,
+            salario: salario
+        };
+        empleados.push(empleado)
+        console.log("empleado insertado")
+    }
+
+    //metodo eliminar
+    function eliminarEmpleado(indice){
+        if(empleados[indice]){
+            empleados.splice(indice,1);
+            console.log('empelado eliminado')
+        }else{
+            console.log("no existe el empleado para eliminar")
+        }
+    }
+
+
+    //metodo ver
+    function mostrarEmpleado(){
+        if(empleados.length === 0){
+            console.log("no existe registros de empleados")
+        }
+        else{
+            empleados.forEach(function(empleado,indice){
+                    console.log("Empleado #" +(indice + 1));
+                    console.log("Nombre: " +(empleado.nombre));
+                    console.log("Edad: " +(empleado.edad));
+                    console.log("Cargo: " +(empleado.cargo));
+                    console.log("Salarioo:" +(empleado.salario));
+                    console.log("<-------------------------------------->");
+                } 
+            )
+        }
+    }
+
+    //metodo crear
+    function actualizarEmpleado(indice,nombre,edad,cargo,salario){
+        if(empleados[indice]){
+            empleados[iindice].nombre = nombre;
+            empleados[iindice].edad = edad;
+            empleados[iindice].cargo = cargo;
+            empleados[iindice].salario = salario;
+            sonsole.log("empleado actualizado")
+        }else{
+            console.log("El empleado no existe")
+        }
+    }
+
+    while (true) {
+        var opcion = prompt("Seleccione una opción:\n1. Agregar usuario\n2. Mostrar usuario\n3. Elminar usuario\n4. Actualizar usaurio\n5. Salir");
+        if (opcion === "1") {
+            let a = prompt("Insertar el nombre de tu empleado")
+            let b = prompt("Inserta la edad de tu empleado")
+            let c = prompt("Ingresa el cargo de tu empleado")
+            let d = prompt("Ingresa el salario de tu empleado")
+            let nombre = [a]
+            let edad = [b]
+            let cargo = [c]
+            let salario = [d]
+            agregarEmpleado(nombre,edad,cargo,salario)
+        } 
+        else if (opcion === "2") {
+            mostrarEmpleado();
+        } 
+        else if (opcion === "3") {
+            let indice = prompt("Escoja que nro de empleado quiere eliminar")
+            eliminarEmpleado(indice)
+        } 
+        else if (opcion === "4") {
+            alert("Ingrese los datos para actualizar")
+            let endece = prompt("Inserta el nro de usuario a elminar")
+            let a = prompt("Insertar el nombre de tu empleado")
+            let b = prompt("Inserta la edad de tu empleado")
+            let c = prompt("Ingresa el cargo de tu empleado")
+            let d = prompt("Ingresa el salario de tu empleado")
+            let nombre = [a]
+            let edad = [b]
+            let cargo = [c]
+            let salario = [d]
+            actualizarEmpleado(endecea,a,b,c,d)
+        }else {
+            console.log("Escogio una opcion invalida");
+            break;
+        }
+    }
+
+
+
+
+</script>
