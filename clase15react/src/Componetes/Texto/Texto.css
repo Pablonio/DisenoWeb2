@@ -1,0 +1,19 @@
+.texto{
+    margin: 24px 0;
+    font-family: 'Indie Flower', sans-serif;
+}
+.texto label{
+    font-family: 'Indie Flower', sans-serif;
+    font-size: 18px;
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.texto input{
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 10px 10px 30px 0px rgba(0,0,0,10%);
+    border: none;
+    padding: 30px 20px;
+    font-size: 16px;
+}
