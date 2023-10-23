@@ -1,0 +1,13 @@
+.boton{
+    background-color: #444444;
+    border-radius: 10px;
+    font-family: 'Indie Flower', 'sans-serif';
+    padding: 24px 30px;
+    border: none;
+    color: #FFFF;
+    margin: 32px 0px;
+    cursor: pointer;
+}
+.boton:hover{
+    color: aqua;
+}
